@@ -28,24 +28,54 @@ const scores = [
     name: "Hatfield Hodge"
   }
 ];
-// Task - MRF// 1. Find average marks in the class (scores) - 1 method
-// 45.428
-
-const output = scores
-.reduce((sum, curr) => (sum + curr.marks) , 0)/scores.length
-
-
-console.log(output);
+// [32, 57, 22]
+// Task 1
+// Print the name list - As an array
+// Expected Output
+// ["Yvette Merritt", "Lillian Ellis", "Mccall Carter", "Pate Collier" ,
+//  "Debra Beard", "Nettie Hancock",  "Hatfield Hodge"]
 
 
-// 2. Find the topper's name - 1 method
-// "Debra Beard"
 
-const topper = scores.reduce((more, curr)=> ( more < curr.marks), 0)
-console.log(topper);
 
-//i tried. i don,t know sir
+ console.log(scores.map((name) => name.name));
 
+
+
+
+
+// Task 2
+// >=40 pass.. find those student that passed (Use array method)
+// Expected Output
+// [{
+//     marks: 57,
+//     name: "Lillian Ellis"
+//   },
+//     {
+//     marks: 91,
+//     name: "Debra Beard"
+//   },
+//   {
+//     marks: 75,
+//     name: "Nettie Hancock"
+//   }]
+
+console.log(scores.filter((more) => more.marks >= 40));
+
+
+// Task 3
+//  Find all the names who failed the exams (Array methods)
+// Expected Output
+//   ["Yvette Merritt",
+//   "Mccall Carter",
+//   "Pate Collier",
+//   "Hatfield Hodge"
+// ];
+
+ const failed = scores
+  .filter((failMark) => failMark.marks < 40)
+  .map((failedPerson) => failedPerson.name)
+ console.log((failed));
 
 
 

@@ -64,5 +64,5 @@ console.log(scores.filter((more) => more.marks >= 40));
 //   "Hatfield Hodge"
 // ];
 
-const failed = scores.filter((failMark) => failMark.marks < 40);
-console.log(failed.map((failedPerson) => failedPerson.name));
+const failed = scores.filter((failMark) => failMark.marks < 40).map((failedPerson) => failedPerson.name)
+console.log((failed));
